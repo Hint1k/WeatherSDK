@@ -239,3 +239,10 @@ public class WeatherMultipleInstances {
     ./publish-sdk.sh 
     ```
   The script will prompt for the new version number, build the JAR file, and upload it to GitHub Packages.
+
+## Generating Documentation
+Run the following command to generate Javadoc:
+
+```sh
+./gradlew javadoc
+ ```

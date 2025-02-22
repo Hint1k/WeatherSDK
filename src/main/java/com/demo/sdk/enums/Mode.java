@@ -8,8 +8,7 @@ package com.demo.sdk.enums;
  *     <li>{@link #ON_DEMAND} - Fetches weather data only when explicitly requested.</li>
  *     <li>{@link #POLLING} - Automatically fetches weather data at regular intervals for cached cities.</li>
  * </ul>
- * </p>
- */
+  */
 public enum Mode {
     /** Fetches weather data only when explicitly requested. */
     ON_DEMAND,
