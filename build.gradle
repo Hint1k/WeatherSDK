@@ -1,0 +1,44 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.demo.sdk'
+version = '1.0-SNAPSHOT'
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(21))
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.0'
+    implementation group: 'org.slf4j', name: 'slf4j-api', version: '2.0.16'
+    implementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.5.16'
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.36'
+    annotationProcessor 'org.projectlombok:lombok:1.18.36'
+    testImplementation group: 'org.mockito', name: 'mockito-core', version: '5.15.2'
+    testImplementation group: 'org.mockito', name: 'mockito-junit-jupiter', version: '5.15.2'
+    testImplementation group: 'org.wiremock', name: 'wiremock-standalone', version: '3.12.0'
+
+    // JUnit 5 dependencies
+    testImplementation platform('org.junit:junit-bom:5.10.0')  // BOM to manage JUnit 5 versions
+    testImplementation 'org.junit.jupiter:junit-jupiter-api'    // JUnit Jupiter API for test annotations
+    testImplementation 'org.junit.jupiter:junit-jupiter-engine' // JUnit Jupiter Engine for test execution
+}
+
+test {
+    useJUnitPlatform()
+}
+
+tasks.jar {
+    manifest {
+        attributes(
+                'Main-Class': 'com.demo.sdk.WeatherSDK'
+        )
+    }
+}

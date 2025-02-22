@@ -1,0 +1,13 @@
+{
+  "request": {
+    "urlPath": "/weather?q=London&appid=weatherApiKey",
+    "method": "GET"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "bodyFileName": "weather.json"
+  }
+}
