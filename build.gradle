@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'com.demo.sdk'
-version = '1.1-SNAPSHOT'
+version = '1.2'
 
 java {
     toolchain {
@@ -69,7 +69,7 @@ publishing {
             from components.java
             groupId = 'com.demo.sdk'
             artifactId = 'weather-sdk'
-            version = '1.1-SNAPSHOT'
+            version = '1.2'
         }
     }
 }

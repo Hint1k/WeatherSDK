@@ -230,3 +230,12 @@ public class WeatherMultipleInstances {
 
 - **Caching**: Weather data is cached for up to 10 cities to minimize API requests.
 - **Automatic Polling**: In polling mode, weather data is refreshed every 10 minutes.
+- **SDK Version Publishing**: Upload new versions of the SDK to GitHub Packages using the provided script,
+  publish-sdk.sh. This script automates the process of building the SDK JAR file and uploading it to the GitHub
+  Package registry, ensuring a smooth version management experience. 
+   
+  To run the script:
+    ```bash
+    ./publish-sdk.sh 
+    ```
+  The script will prompt for the new version number, build the JAR file, and upload it to GitHub Packages.
